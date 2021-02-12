@@ -77,14 +77,13 @@ if(USE_LIBUV)
       endif()
       set(libuv_INCLUDE_DIRS ${uv_HEADER_PATH}/..)
     else()
-      include(FindPkgConfig)
-      pkg_search_module(libuv REQUIRED libuv>=1.26)
+      # include(FindPkgConfig)
+      # pkg_search_module(libuv REQUIRED libuv>=1.26)
       find_file(
         libuv_LIBRARY
         NAMES libuv.a libuv_a.a
         PATHS ${libuv_LIBDIR}
         NO_DEFAULT_PATH)
-        message("${libuv_FOUND}")
       if(NOT EXISTS ${libuv_LIBRARY})
         message(FATAL_ERROR "Unable to find static libuv library in " ${libuv_LIBDIR})
       endif()

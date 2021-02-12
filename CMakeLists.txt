@@ -36,8 +36,6 @@ option(USE_RCCL "Support using RCCL for local collectives" ${USE_RCCL_DEFAULT})
 option(USE_LIBUV "Build libuv transport" ${USE_LIBUV_DEFAULT})
 option(USE_TCP_OPENSSL "Build tcp+openssl transport" ${USE_TCP_OPENSSL_DEFAULT})
 
-set(ENV{PKG_CONFIG_PATH} "${CMAKE_SOURCE_DIR}/../copy_libuv/libuv/lib/pkgconfig")
-
 if(MSVC)
   message(STATUS "MSVC detected")
   set(USE_REDIS OFF)
