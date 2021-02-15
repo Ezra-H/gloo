@@ -11,11 +11,11 @@
 #include <string>
 #include <vector>
 
-// #ifdef HIREDIS_NESTED_INCLUDE
+#ifdef HIREDIS_NESTED_INCLUDE
 #include <hiredis/hiredis.h>
-// #else
-// #include <hiredis.h>
-// #endif
+#else
+#include <hiredis.h>
+#endif
 
 #include "gloo/config.h"
 #include "gloo/rendezvous/store.h"
